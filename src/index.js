@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 import './style.scss';
-import { Body } from './Body/index';
+import Body from './Body/index';
 
 require('bulma');
 
