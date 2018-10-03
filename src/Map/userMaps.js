@@ -13,7 +13,14 @@ export const WomenRun = () => (
       <article className="media">
 
         <div className="media-left">
-          <Map name="womenRun" lat="43.23" long="76.88" zoom="11" className="map" />
+          <Map
+            name="womenRun"
+            lat="43.23"
+            long="76.88"
+            zoom="11"
+            className="map"
+            mapPath="/map-routes/TestMap.json" // For the demo purpose path to the file inside the source folder
+          />
         </div>
 
         <div className="media-content">
@@ -108,6 +115,12 @@ export const HalfMarathon = () => (
   </>
 );
 
+const setUser = (event) => {
+  const values = event.target.value;
+
+  return values;
+};
+
 export const AlmatyMarathon = () => (
   <>
     <h1 className="title"> Алматы Марафон </h1>
@@ -116,11 +129,28 @@ export const AlmatyMarathon = () => (
       <article className="media">
 
         <div className="media-left">
-          <Map name="almatyMarathon" lat="43.23" long="76.88" zoom="11" className="map" pmIgnore />
+          <Map name="almatyMarathon" lat="43.23" long="76.88" zoom="11" className="map" />
         </div>
 
         <div className="media-content">
           <div className="content">
+            {/* Turn on/off admin mode */}
+            <div className="control" onChange={event => setUser(event)}>
+              <label className="radio">
+                <input type="radio"
+                  name="isAdmin"
+                  value="true" />
+                Да
+              </label>
+              <label className="radio">
+                <input type="radio"
+                  name="isAdmin"
+                  value="false"
+                  defaultChecked />
+                Нет
+                </label>
+            </div>
+
             <p>
               День и время соревнований: 21 апреля 2019 г., с 06:00 до 15:00.
                   </p>
@@ -137,7 +167,7 @@ export const AlmatyMarathon = () => (
               40-49 лет;
               50-59 лет;
               Старше 60 лет.
-                  </p>
+            </p>
 
             <p>
               Возрастные категории дистанции 21 км:
@@ -170,7 +200,7 @@ export const AdminPanel = () => (
 
         <div className="media-left">
           <Map
-            name="almatyMarathon"
+            name="adminMap"
             lat="43.23"
             long="76.88"
             zoom="11"
@@ -181,11 +211,14 @@ export const AdminPanel = () => (
 
         <div className="media-content">
           <div className="content">
-
+            Инструкции к использованию:
+              1. Жмякать
+              2. Сохранять
+              3. Записать
+              4. Радоваться
           </div>
         </div>
       </article>
     </div>
-
   </>
 );
