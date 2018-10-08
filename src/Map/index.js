@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style.scss';
-import { Notification } from '../Controllers/Notification';
 
 const DG = require('2gis-maps');
 
