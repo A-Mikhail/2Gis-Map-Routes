@@ -25,7 +25,7 @@ export class NavBar extends Component {
 
                     <div id="navMenu" className="navbar-menu">
                         <div className="navbar-start">
-                            <Link to="/" key="main" className="navbar-item"> Главная страница </Link>
+                            <Link to="https://a-mikhail.github.io/2Gis-Map-Routes/" key="main" className="navbar-item"> Главная страница </Link>
                             <Link to='/WomenRun' key='WomenRun' className="navbar-item"> Женский забег </Link>
                             <Link to='/HalfMarathon' key='HalfMarathon' className="navbar-item"> Алматинский Полумарафон </Link>
                             <Link to='/AlmatyMarathon' key='AlmatyMarathon' className="navbar-item"> Алматы марафон 2019 </Link>
