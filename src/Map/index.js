@@ -211,10 +211,8 @@ export default class Map extends Component {
 
       return (
         <>
-          <p> Импортировать Карту </p>
-
           {expMapButton}
-
+          
           <div id={this.state.containerID} className={this.props.className} />
         </>
       );

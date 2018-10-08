@@ -1,7 +1,8 @@
 {
-  "name": "rect-app",
-  "version": "0.1.0",
-  "private": true,
+  "homepage": "https://a-mikhail.github.io/2Gis-Map-Routes",
+  "name": "2gis-map-routes",
+  "version": "0.0.1",
+  "private": false,
   "dependencies": {
     "2gis-maps": "^3.5.2",
     "bulma": "^0.7.1",
@@ -15,7 +16,9 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -28,6 +31,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
@@ -37,6 +41,5 @@
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
-  },
-  "homepage": "."
+  }
 }
