@@ -61,7 +61,14 @@ export const HalfMarathon = () => (
       <article className="media">
 
         <div className="media-left">
-          <Map name="HalfMarathon" lat="43.23" long="76.88" zoom="11" className="map" />
+          <Map
+            name="HalfMarathon"
+            lat="43.23"
+            long="76.88"
+            zoom="11"
+            className="map"
+            mapPath="/map-routes/TestMap_1.json" // For the demo purpose path to the file inside the source folder
+          />
         </div>
 
         <div className="media-content">
@@ -115,12 +122,6 @@ export const HalfMarathon = () => (
   </>
 );
 
-const setUser = (event) => {
-  const values = event.target.value;
-
-  return values;
-};
-
 export const AlmatyMarathon = () => (
   <>
     <h1 className="title"> Алматы Марафон </h1>
@@ -129,28 +130,18 @@ export const AlmatyMarathon = () => (
       <article className="media">
 
         <div className="media-left">
-          <Map name="almatyMarathon" lat="43.23" long="76.88" zoom="11" className="map" />
+          <Map
+            name="HalfMarathon"
+            lat="43.23"
+            long="76.88"
+            zoom="11"
+            className="map"
+            mapPath="/map-routes/TestMap_1.json" // For the demo purpose path to the file inside the source folder
+          />
         </div>
 
         <div className="media-content">
           <div className="content">
-            {/* Turn on/off admin mode */}
-            <div className="control" onChange={event => setUser(event)}>
-              <label className="radio">
-                <input type="radio"
-                  name="isAdmin"
-                  value="true" />
-                Да
-              </label>
-              <label className="radio">
-                <input type="radio"
-                  name="isAdmin"
-                  value="false"
-                  defaultChecked />
-                Нет
-                </label>
-            </div>
-
             <p>
               День и время соревнований: 21 апреля 2019 г., с 06:00 до 15:00.
                   </p>
@@ -211,11 +202,13 @@ export const AdminPanel = () => (
 
         <div className="media-content">
           <div className="content">
-            Инструкции к использованию:
-              1. Жмякать
-              2. Сохранять
-              3. Записать
-              4. Радоваться
+            <h1> Инструкции к использованию </h1>
+            <p> 1. Жмякать (В демо работает только режим рисования, линии, полигоны и метки)</p>
+            <p> 2. Сохранить карту </p>
+            <p>
+              3. Позвать разработчика
+              <a className="button is-link" href="mailto:mikhail.adamenko@protonmail.com">( ͡~ ͜ʖ ͡°)</a>
+            </p>
           </div>
         </div>
       </article>
