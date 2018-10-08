@@ -39,7 +39,7 @@ export default class Body extends Component {
 
                 <div className="hero-body">
                     <div className="container">
-                        <Route exact path="/" component={Main} />
+                        <Route exact path="https://a-mikhail.github.io/2Gis-Map-Routes/" component={Main} />
 
                         <Route path="/WomenRun" component={WomenRun} />
                         <Route path="/HalfMarathon" component={HalfMarathon} />
