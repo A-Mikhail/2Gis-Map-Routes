@@ -13,7 +13,7 @@ require('./libs/leaflet.pm.min');
 require('./libs/leaflet.pm.css');
 
 const GlobalRouter = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Body />
   </Router>
 );

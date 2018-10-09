@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { NavBar } from '../NavBar/index';
+import NavBar from '../NavBar/index';
 import {
     WomenRun, HalfMarathon, AlmatyMarathon, AdminPanel,
 } from '../Map/userMaps';
@@ -39,12 +39,12 @@ export default class Body extends Component {
 
                 <div className="hero-body">
                     <div className="container">
-                        <Route exact path="/" component={Main} />
+                        <Route exact path='/' component={Main} />
 
-                        <Route path="/WomenRun" component={WomenRun} />
-                        <Route path="/HalfMarathon" component={HalfMarathon} />
-                        <Route path="/AlmatyMarathon" component={AlmatyMarathon} />
-                        <Route path="/AdminPanel" component={AdminPanel} />
+                        <Route path='/WomenRun' component={WomenRun} />
+                        <Route path='/HalfMarathon' component={HalfMarathon} />
+                        <Route path='/AlmatyMarathon' component={AlmatyMarathon} />
+                        <Route path='/AdminPanel' component={AdminPanel} />
                     </div>
                 </div>
             </section>
