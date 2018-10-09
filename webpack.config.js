@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -33,16 +34,23 @@ module.exports = {
         ],
     },
     optimization: {
-      minimizer: [new UglifyJsPlugin()],
+        minimizer: [new UglifyJsPlugin()],
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: './public/index.html',
             filename: './index.html',
+            favicon: './public/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                PUBLIC_URL: devMode ? JSON.stringify('.') : JSON.stringify('https://a-mikhail.github.io/2Gis-Map-Routes/'),
+            },
         }),
     ],
     devServer: {

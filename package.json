@@ -1,8 +1,11 @@
 {
-  "homepage": "https://a-mikhail.github.io/2Gis-Map-Routes",
   "name": "2gis-map-routes",
+  "author": {
+    "name": "Mikhail Adamenko",
+    "email": "mikhail.adamenko@protonmail.com"
+  },
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "dependencies": {
     "2gis-maps": "^3.5.2",
     "bulma": "^0.7.1",
