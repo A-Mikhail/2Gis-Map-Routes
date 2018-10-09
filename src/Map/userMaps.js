@@ -1,6 +1,9 @@
 import React from 'react';
 import Map from './index';
 
+import TestMap from '../map-routes/TestMap.json';
+import TestMapOne from '../map-routes/TestMap_1.json';
+
 /**
  * Place here custom made maps
  */
@@ -19,7 +22,7 @@ export const WomenRun = () => (
             long="76.88"
             zoom="11"
             className="map"
-            mapPath="/map-routes/TestMap.json" // For the demo purpose path to the file inside the source folder
+            mapPath={TestMap} // For the demo purpose path to the file inside the source folder
           />
         </div>
 
@@ -67,7 +70,7 @@ export const HalfMarathon = () => (
             long="76.88"
             zoom="11"
             className="map"
-            mapPath="/map-routes/TestMap_1.json" // For the demo purpose path to the file inside the source folder
+            mapPath={TestMapOne} // For the demo purpose path to the file inside the source folder
           />
         </div>
 
@@ -136,7 +139,7 @@ export const AlmatyMarathon = () => (
             long="76.88"
             zoom="11"
             className="map"
-            mapPath="/map-routes/TestMap_1.json" // For the demo purpose path to the file inside the source folder
+            mapPath={TestMapOne} // For the demo purpose path to the file inside the source folder
           />
         </div>
 
