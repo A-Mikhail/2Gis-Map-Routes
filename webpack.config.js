@@ -48,8 +48,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-                PUBLIC_URL: devMode ? JSON.stringify('.') : JSON.stringify('https://a-mikhail.github.io/2Gis-Map-Routes/'),
+                PUBLIC_URL: devMode ? JSON.stringify('/') : JSON.stringify('2Gis-Map-Routes'),
             },
         }),
     ],
