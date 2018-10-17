@@ -12,11 +12,21 @@ require('bulma');
 require('./libs/leaflet.pm.min');
 require('./libs/leaflet.pm.css');
 
-const GlobalRouter = () => (
-  <Router basename={process.env.PUBLIC_URL}>
-    <Body />
-  </Router>
-);
+const GlobalRouter = () => {
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <Router basename="/">
+        <Body />
+      </Router>
+    );
+  }
+
+  return (
+    <Router basename="/2Gis-Map-Routes/">
+      <Body />
+    </Router>
+  );
+};
 
 ReactDOM.render(<GlobalRouter />, document.getElementById('root'));
 registerServiceWorker();
