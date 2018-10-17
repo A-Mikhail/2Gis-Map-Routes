@@ -3,6 +3,7 @@ import Map from './index';
 
 import TestMap from '../map-routes/TestMap.json';
 import TestMapOne from '../map-routes/TestMap_1.json';
+import TheBestMap from '../map-routes/HireMe.json';
 
 /**
  * Place here custom made maps
@@ -139,7 +140,7 @@ export const AlmatyMarathon = () => (
             long="76.88"
             zoom="11"
             className="map"
-            mapPath={TestMapOne} // For the demo purpose path to the file inside the source folder
+            mapPath={TheBestMap} // For the demo purpose path to the file inside the source folder
           />
         </div>
 
